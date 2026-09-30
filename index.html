@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio personal de Fernando Gabriel Quiroga, estudiante de Programación y desarrollador de software .NET, C# y C++.">
+  <meta name="author" content="Fernando Gabriel Quiroga">
+  <meta name="theme-color" content="#0d1117">
+  <title>Fernando Gabriel Quiroga | Desarrollador de Software</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1117'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%232f81f7' font-family='monospace' font-weight='bold' font-size='15'%3E&lt;FQ/&gt;%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- =============================================================
+       EFECTOS DE FONDO ANIMADOS (CYBER MESH, ORBS Y CANVAS)
+       ============================================================= -->
+  <div class="bg-fx" aria-hidden="true">
+    <canvas id="bg-canvas" class="bg-fx__canvas"></canvas>
+    <div class="bg-fx__orb bg-fx__orb--1"></div>
+    <div class="bg-fx__orb bg-fx__orb--2"></div>
+    <div class="bg-fx__orb bg-fx__orb--3"></div>
+    <div class="bg-fx__grid"></div>
+  </div>
+  <!-- =============================================================
+       ENCABEZADO Y NAVEGACIÓN
+       ============================================================= -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Navegación principal">
+      <a class="site-nav__brand" href="#inicio" aria-label="Ir al inicio">
+        <span aria-hidden="true">&lt;</span> Fernando Gabriel Quiroga <span aria-hidden="true">/&gt;</span>
+      </a>
+
+      <!-- Menú responsive 100% CSS: checkbox + label -->
+      <input class="site-nav__toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menú de navegación">
+      <label class="site-nav__menu-button" for="menu-toggle" aria-controls="menu" aria-label="Abrir o cerrar menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <ul class="site-nav__menu" id="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#conocimientos">Conocimientos</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#redes">Redes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===========================================================
+         HERO / INICIO
+         =========================================================== -->
+    <section class="hero section" id="inicio" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow">Software &amp; Ingeniería</p>
+          <h1 id="hero-title">Fernando Gabriel Quiroga</h1>
+          <p class="hero__role">Estudiante de Programación <span aria-hidden="true">|</span> Desarrollador de Software (.NET / C# / C++)<span class="cursor-blink" aria-hidden="true">_</span></p>
+          <p class="hero__lead">
+            Estudiante de la Tecnicatura Universitaria en Programación (UTN FRGP) enfocado en el desarrollo de software robusto, arquitecturas orientadas a objetos y persistencia de datos.
+          </p>
+
+          <div class="hero__actions" aria-label="Acciones principales">
+            <a class="button button--primary" href="#proyectos">Ver proyectos</a>
+            <a class="button button--secondary" href="cv/CV_Fernando_Quiroga.pdf" download>Descargar CV</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="profile-glow">
+            <div class="profile-backdrop-aura" aria-hidden="true"></div>
+            <img
+              src="img/foto-perfil.png"
+              alt="Foto de perfil de Fernando Gabriel Quiroga"
+              class="profile-image"
+              width="480"
+              height="480"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         SOBRE MÍ Y TRAYECTORIA
+         =========================================================== -->
+    <section class="section" id="sobre-mi" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Perfil</p>
+          <h2 id="about-title">Sobre mí y trayectoria</h2>
+        </div>
+
+        <div class="about__grid">
+          <article class="surface-card about__intro">
+            <p>
+              Soy estudiante de la Tecnicatura Universitaria en Programación en la Universidad Tecnológica Nacional (Facultad Regional General Pacheco). Mi formación está orientada a la ingeniería de software mediante lenguajes como C++, C# y el entorno .NET, complementada con desarrollo web estándar (HTML, CSS y JavaScript).
+            </p>
+            <p>
+              A lo largo de mi trayectoria académica he desarrollado soluciones que abarcan desde el manejo de memoria y persistencia binaria a bajo nivel hasta aplicaciones de escritorio multicapa integradas con bases de datos relacionales en SQL Server. Cuento con experiencia en trabajo en equipo bajo control de versiones y busco aplicar metodologías sólidas para resolver problemas reales mediante código mantenible y eficiente.
+            </p>
+          </article>
+
+          <div class="about__details" aria-label="Datos rápidos">
+            <article class="surface-card info-card">
+              <h3>Ubicación</h3>
+              <p>General Pacheco, Buenos Aires, Argentina</p>
+            </article>
+
+            <article class="surface-card info-card">
+              <h3>Idiomas</h3>
+              <p>Español (Nativo) <span aria-hidden="true">|</span> Inglés (B1 – Técnico / Lectura de documentación)</p>
+            </article>
+
+            <article class="surface-card info-card">
+              <h3>Educación</h3>
+              <p>Tecnicatura Universitaria en Programación — Universidad Tecnológica Nacional (UTN FRGP) <span class="muted">[En curso]</span></p>
+            </article>
+
+            <article class="surface-card info-card">
+              <h3>Situación actual</h3>
+              <p>Proyectos académicos y desarrollo de software independiente / En formación activa</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="timeline" aria-label="Trayectoria académica">
+          <div class="timeline__item">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content surface-card">
+              <p class="timeline__date">2024 – Presente</p>
+              <h3>Estudiante Universitario en UTN FRGP</h3>
+              <p>
+                Desarrollo de Software Académico con implementación de proyectos colaborativos en C++, C# .NET y modelado relacional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         CONOCIMIENTOS Y HABILIDADES
+         =========================================================== -->
+    <section class="section section--alt" id="conocimientos" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">02 / Stack</p>
+          <h2 id="skills-title">Conocimientos y habilidades</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="surface-card skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__index">01</span>
+              <h3>Lenguajes</h3>
+            </div>
+            <div class="tag-list" aria-label="Lenguajes">
+              <span class="tag">C++</span>
+              <span class="tag">C#</span>
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+            </div>
+          </article>
+
+          <article class="surface-card skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__index">02</span>
+              <h3>Frameworks y tecnologías</h3>
+            </div>
+            <div class="tag-list" aria-label="Frameworks y tecnologías">
+              <span class="tag">.NET Framework</span>
+              <span class="tag">Windows Forms</span>
+              <span class="tag">Web Standards</span>
+            </div>
+          </article>
+
+          <article class="surface-card skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__index">03</span>
+              <h3>Bases de datos</h3>
+            </div>
+            <div class="tag-list" aria-label="Bases de datos">
+              <span class="tag">Microsoft SQL Server</span>
+              <span class="tag">Modelado relacional</span>
+              <span class="tag">DDL / DML</span>
+              <span class="tag">Consultas estructuradas</span>
+            </div>
+          </article>
+
+          <article class="surface-card skill-card">
+            <div class="skill-card__header">
+              <span class="skill-card__index">04</span>
+              <h3>Herramientas y metodologías</h3>
+            </div>
+            <div class="tag-list" aria-label="Herramientas y metodologías">
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">POO</span>
+              <span class="tag">Persistencia binaria</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         PROYECTOS DESTACADOS
+         =========================================================== -->
+    <section class="section" id="proyectos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Trabajo destacado</p>
+          <h2 id="projects-title">Proyectos</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-card__media">
+              <img
+                src="img/proyecto-club.jpg"
+                alt="Captura representativa del Sistema de Gestión Integral para Club"
+                width="800"
+                height="500"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__context">Proyecto académico grupal — UTN FRGP</p>
+              <h3>Sistema de Gestión Integral para Club</h3>
+              <div class="tag-list" aria-label="Tecnologías del proyecto">
+                <span class="tag">Consola</span>
+                <span class="tag">C++</span>
+                <span class="tag">Persistencia de bajo nivel</span>
+              </div>
+              <p>
+                Sistema modular para la administración de entidades deportivas (Socios, Actividades, Inscripciones y Membresías). Implementa Programación Orientada a Objetos y almacenamiento persistente mediante registros y archivos binarios con <code>&lt;cstdio&gt;</code>.
+              </p>
+              <p class="project-card__role"><strong>Rol:</strong> Desarrollador / Colaborador — Lógica de negocio, diseño de estructuras de datos y persistencia.</p>
+              <a class="project-card__link" href="https://github.com/SaikoVn/ProyectoUTNGestorClub" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositorio del Sistema de Gestión Integral para Club en GitHub">
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img
+                src="img/proyecto-enredados.jpg"
+                alt="Captura representativa del videojuego de dados por turnos Enredados"
+                width="800"
+                height="500"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__context">Trabajo Práctico Integrador grupal — UTN FRGP</p>
+              <h3>Enredados – Videojuego de Dados por Turnos</h3>
+              <div class="tag-list" aria-label="Tecnologías del proyecto">
+                <span class="tag">Consola</span>
+                <span class="tag">C++</span>
+                <span class="tag">Algoritmos y lógica de estado</span>
+              </div>
+              <p>
+                Implementación de un juego de dados multijugador por rondas. Incorpora mecánicas con dados de 6 y 12 caras, cálculo de puntajes combinados, control de flujo por turnos y validación rigurosa de entradas de usuario.
+              </p>
+              <p class="project-card__role"><strong>Rol:</strong> Desarrollador / Colaborador — Diseño de la lógica de puntuación, control de flujo y pruebas.</p>
+              <a class="project-card__link" href="https://github.com/Soymigueprogramador/tpi-grupo2.git" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositorio de Enredados en GitHub">
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img
+                src="img/proyecto-catalogo.jpg"
+                alt="Captura representativa del Sistema de Catálogo Comercial y Artículos"
+                width="800"
+                height="500"
+                loading="lazy"
+              >
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__context">Proyecto de desarrollo de software — UTN FRGP</p>
+              <h3>Sistema de Catálogo Comercial y Artículos</h3>
+              <div class="tag-list" aria-label="Tecnologías del proyecto">
+                <span class="tag">Aplicación de Escritorio</span>
+                <span class="tag">C# (.NET)</span>
+                <span class="tag">Windows Forms</span>
+                <span class="tag">SQL Server</span>
+              </div>
+              <p>
+                Aplicación de escritorio diseñada bajo arquitectura en capas para la gestión centralizada de artículos de inventario. Incluye operaciones CRUD completas, conexión y consultas directas a una base de datos relacional local en SQL Server, pensada como servicio desacoplado.
+              </p>
+              <p class="project-card__role"><strong>Rol:</strong> Desarrollador principal — Diseño de interfaz en WinForms, mapeo de datos y lógica de persistencia.</p>
+              <a class="project-card__link" href="https://github.com/SaikoVn/tp-winform-equipo-j" target="_blank" rel="noopener noreferrer" aria-label="Abrir repositorio de Catálogo Comercial y Artículos en GitHub">
+                Ver repositorio <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         REDES / PRESENCIA ONLINE
+         =========================================================== -->
+    <section class="section section--alt" id="redes" aria-labelledby="social-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">04 / Contacto profesional</p>
+          <h2 id="social-title">Redes y presencia online</h2>
+        </div>
+
+        <div class="social-grid">
+          <a class="social-card" href="https://www.linkedin.com/in/fernando-gabriel-quiroga-medina-22a8b3373" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Gabriel Quiroga en LinkedIn">
+            <svg class="social-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6.5 8.5A1.5 1.5 0 1 0 6.5 5a1.5 1.5 0 0 0 0 3.5ZM5 9.75h3V19H5V9.75Zm5 0h2.88v1.26h.04c.4-.74 1.38-1.52 2.83-1.52 3.03 0 3.59 1.88 3.59 4.33V19h-3v-4.58c0-1.09-.02-2.49-1.52-2.49-1.52 0-1.75 1.19-1.75 2.41V19h-3V9.75Z" fill="currentColor"/>
+            </svg>
+            <span><strong>LinkedIn</strong><small>Perfil profesional</small></span>
+            <span class="social-card__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-card" href="https://github.com/SaikoVn" target="_blank" rel="noopener noreferrer" aria-label="Perfil de Fernando Gabriel Quiroga en GitHub">
+            <svg class="social-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.76-1.5-3.76-1.5-.51-1.31-1.25-1.66-1.25-1.66-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 .1 1.58-.78 1.58-.78.9-1.56 2.35-1.11 2.92-.85.1-.7.4-1.11.72-1.37-2.47-.28-5.06-1.24-5.06-5.5 0-1.22.43-2.22 1.15-3-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.08 1.15a10.62 10.62 0 0 1 5.61 0c2.13-1.45 3.07-1.15 3.07-1.15.61 1.53.23 2.66.11 2.94.72.78 1.15 1.78 1.15 3 0 4.27-2.6 5.21-5.08 5.49.4.35.76 1.03.76 2.08v3.1c0 .3.2.64.77.53A11.2 11.2 0 0 0 12 .8Z" fill="currentColor"/>
+            </svg>
+            <span><strong>GitHub</strong><small>Repositorios y proyectos</small></span>
+            <span class="social-card__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-card" href="mailto:quirogabyuv@gmail.com" aria-label="Enviar correo electrónico a quirogabyuv@gmail.com">
+            <svg class="social-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3.5 5.5h17A1.5 1.5 0 0 1 22 7v10a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 17V7a1.5 1.5 0 0 1 1.5-1.5Zm0 2.1 8.5 5.8 8.5-5.8V7l-8.5 5.8L3.5 7v.6Z" fill="currentColor"/>
+            </svg>
+            <span><strong>Email</strong><small>quirogabyuv@gmail.com</small></span>
+            <span class="social-card__arrow" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="social-card" href="https://wa.me/5491165639854" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp (+54 9 11 6563-9854)">
+            <svg class="social-card__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 2.25a9.75 9.75 0 0 0-8.43 14.65L2.5 21.5l4.76-1.05A9.75 9.75 0 1 0 12 2.25Zm0 17.3a7.53 7.53 0 0 1-3.84-1.05l-.27-.16-2.82.62.64-2.75-.18-.28A7.5 7.5 0 1 1 12 19.55Zm4.12-5.61c-.22-.11-1.29-.64-1.49-.71-.2-.07-.35-.11-.5.11-.15.22-.57.71-.7.86-.13.14-.25.16-.47.05-.22-.11-.92-.34-1.75-1.08-.65-.58-1.09-1.3-1.22-1.52-.13-.22-.01-.34.1-.45.1-.1.22-.25.33-.37.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.66-.18-.44-.37-.38-.5-.39h-.43c-.15 0-.39.05-.6.28-.21.22-.79.77-.79 1.87s.81 2.17.92 2.32c.11.15 1.59 2.42 3.86 3.4.54.23.96.37 1.29.47.54.17 1.03.14 1.42.09.43-.06 1.29-.53 1.47-1.04.18-.51.18-.95.13-1.04-.06-.09-.2-.14-.42-.25Z" fill="currentColor"/>
+            </svg>
+            <span><strong>WhatsApp</strong><small>+54 9 11 6563-9854</small></span>
+            <span class="social-card__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================================================
+         CONTACTO / FORMSPREE
+         =========================================================== -->
+    <section class="section" id="contacto" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__intro">
+          <div class="section-heading">
+            <p class="eyebrow">05 / Mensaje</p>
+            <h2 id="contact-title">Hablemos</h2>
+          </div>
+          <p>
+            Para consultas profesionales, proyectos académicos o propuestas de colaboración, podés escribir directamente desde este formulario.
+          </p>
+          <p class="muted mono">/contacto → formspree</p>
+        </div>
+
+        <form class="contact-form surface-card" action="https://formspree.io/f/xoevbkyj" method="POST">
+          <div class="form-field">
+            <label for="name">Nombre completo</label>
+            <input id="name" type="text" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" type="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Asunto</label>
+            <input id="subject" type="text" name="subject" required>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="button button--primary button--full" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============================================================
+       FOOTER
+       ============================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Fernando Gabriel Quiroga | Tecnicatura Universitaria en Programación — UTN FRGP.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
