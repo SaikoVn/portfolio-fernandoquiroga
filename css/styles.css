@@ -735,17 +735,27 @@ h3:last-child {
 }
 
 .project-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   border-bottom: 1px solid var(--color-borde);
   background:
     linear-gradient(135deg, rgba(47, 129, 247, 0.08), rgba(13, 17, 23, 0.96)),
-    #11161d;
+    #0d1117;
+  padding: var(--space-2);
 }
 
 .project-card__media img {
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
   opacity: 0.96;
+  transition: transform var(--transition-normal);
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.02);
 }
 
 .project-card__body {
